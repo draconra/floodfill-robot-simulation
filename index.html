@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MICROMOUSE_3X3::CORE_SIMULATOR</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+</head>
+<body class="retro-terminal">
+    <div class="crt-overlay"></div>
+    <main class="app-container">
+        <header class="cyber-header">
+            <div class="header-inner">
+                <h1>MICROMOUSE_3X3::FLOODFILL_OS</h1>
+                <div class="system-stats">
+                    <span>PATHFINDER_V1.0</span>
+                    <span class="pulse">CONNECTED</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="simulation-workspace">
+            <div class="maze-frame">
+                <div id="maze-grid" class="grid-3x3">
+                </div>
+            </div>
+
+            <aside class="control-panel">
+                <div class="panel-inner">
+                    <div class="panel-section cmd-group">
+                        <h3>COMMANDS::</h3>
+                        <button id="btn-generate" class="cyber-btn" title="Generate random maze">GENERATE_MAP</button>
+                        <button id="btn-step" class="cyber-btn" title="Perform one step">EXECUTE_STEP</button>
+                        <button id="btn-auto" class="cyber-btn" title="Auto solve">AUTO_DRIVE</button>
+                        <button id="btn-reset" class="cyber-btn" title="Reset system">SYS_REBOOT</button>
+                    </div>
+
+                    <div class="panel-section config-group">
+                        <h3>PARAMETERS::</h3>
+                        <div class="slider-container">
+                            <label for="speed-slider">ANIM_DELAY::</label>
+                            <input type="range" id="speed-slider" min="50" max="800" step="50" value="400">
+                        </div>
+                    </div>
+
+                    <div class="panel-section status-group">
+                        <h3>LOG::</h3>
+                        <div id="status-log" class="log-area">
+                            <div class="log-line">> SYSTEM_BOOT_SEQUENCE_COMPLETE...</div>
+                            <div class="log-line">> WAITING_FOR_INPUT...</div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </section>
+    </main>
+    <script type="module" src="src/main.js?v=2"></script>
+</body>
+</html>
